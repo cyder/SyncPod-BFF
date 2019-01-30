@@ -1,45 +1,50 @@
 type BanReport {
-  id: Int!
-  target: User!
-  reporter: User!
-  room: Room!
-  expirationAt: DateTime!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # id: Int!
+  # target: User!
+  # reporter: User!
+  # room: Room!
+  # expirationAt: DateTime!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
 }
 
 type Chat {
-  id: Int!
-  room: Room!
-  user: User
-  chatType: String!
-  message: String!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # id: Int!
+  # room: Room!
+  # user: User
+  # chatType: String!
+  # message: String!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
 }
 
 type Room {
   id: Int!
-  videos: [Video!]!
-  chats: [Chat!]!
-  userRoomLogs: [UserRoomLog!]!
-  banReports: [BanReport!]!
+  # videos: [Video!]!
+  # chats: [Chat!]!
+  # userRoomLogs: [UserRoomLog!]!
+  # banReports: [BanReport!]!
   createUser: User
+  nowPlayingVideo: Video
+  lastPlayingVideo: Video
+  onlineUsers: [User!]!
   name: String!
   key: String!
   description: String!
   public: Boolean!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
 }
 
 type User {
   id: Int!
-  videos: [Video!]!
-  chats: [Chat!]!
-  userRoomLogs: [UserRoomLog!]!
-  reports: [UserReport!]!
+  # videos: [Video!]!
+  # chats: [Chat!]!
+  # userRoomLogs: [UserRoomLog!]!
+  # reports: [UserReport!]!
   name: String!
+  email: String!
+  access_token: String!
   selfIntroduction: String
   icon: String
   createdAt: DateTime!
@@ -47,34 +52,34 @@ type User {
 }
 
 type UserReport {
-  user: User!
-  message: String!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # user: User!
+  # message: String!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
 }
 
 type UserRoomLog {
-  user: User!
-  room: Room!
-  entryAt: DateTime!
-  exitAt: DateTime!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # user: User!
+  # room: Room!
+  # entryAt: DateTime!
+  # exitAt: DateTime!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
 }
 
 type Video {
-  room: Room!
-  addUser: User!
-  youtubeVideoId: String!
-  title: String
-  channelTitle: String
-  thumbnailUrl: String
-  duration: String
-  description: String
-  viewCount: Int
-  published: DateTime!
-  videoStartTime: DateTime!
-  videoEndTime: DateTime!
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  # room: Room!
+  # addUser: User!
+  # youtubeVideoId: String!
+  # title: String
+  # channelTitle: String
+  # thumbnailUrl: String
+  # duration: String
+  # description: String
+  # viewCount: Int
+  # published: DateTime!
+  # videoStartTime: DateTime!
+  # videoEndTime: DateTime!
+  # createdAt: DateTime!
+  # updatedAt: DateTime!
 }
