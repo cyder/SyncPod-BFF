@@ -33,7 +33,7 @@ yarn start
 3. View GraphQL playground
 
 ```
-open http://localhost:4000/
+open http://localhost:4000/graphql
 ```
 
 ## Deployment
