@@ -1,6 +1,10 @@
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer, gql } from "apollo-server-express";
 import * as fs from "fs";
 import * as path from "path";
+import express from "express";
+
+const API_HOST = process.env.NODE_ENV === "production" ? "https://api.sync-pod.com" : "http://localhost:3000s";
+const PORT = 4000;
 
 // The GraphQL schema
 const typeDefs = gql`
@@ -141,11 +145,15 @@ const resolvers = {
   },
 };
 
+const app = express();
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
 
-server.listen().then(({ url }: { url: any }) => {
-  console.log(`🚀 Server ready at ${url}`);
+server.applyMiddleware({ app, cors: { credentials: true, origin: API_HOST } });
+
+app.listen({ port: PORT }, () => {
+  console.log(`🚀  Server ready at localhost:${PORT}${server.graphqlPath}`);
 });
