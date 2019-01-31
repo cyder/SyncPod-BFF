@@ -52,10 +52,11 @@ type User {
 }
 
 type UserReport {
+  id: Int!
   # user: User!
-  # message: String!
-  # createdAt: DateTime!
-  # updatedAt: DateTime!
+  message: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }
 
 type UserRoomLog {

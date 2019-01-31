@@ -25,7 +25,9 @@ const typeDefs = gql`
 
   type Mutation {
     login(email: String!, password: String!): User!
+    signup(email: String!, password: String!): User!
     createRoom(name: String!, description: String!, public: Boolean!): Room!
+    createUserReport(message: String!): UserReport!
   }
 `;
 
@@ -130,6 +132,18 @@ const resolvers = {
         self_introduction: null,
       };
     },
+    signup: (root: any, args: any, context: any, info: any) => {
+      return {
+        id: 94,
+        email: "user@example.com",
+        name: "",
+        access_token: "94:U-yJzvseLMqVibMK-y_Z",
+        created_at: "2018-03-31T07:35:06.000Z",
+        updated_at: "2018-03-31T07:35:06.000Z",
+        self_introduction: null,
+        icon: null,
+      };
+    },
     createRoom: (root: any, args: any, context: any, info: any) => {
       return {
         id: 1112,
@@ -145,6 +159,14 @@ const resolvers = {
           name: "MyString",
           url: null,
         },
+      };
+    },
+    createUserReport: (root: any, args: any, context: any, info: any) => {
+      return {
+        id: 1,
+        message: "message",
+        created_at: "2018-03-31T07:35:06.000Z",
+        updated_at: "2018-03-31T07:35:06.000Z",
       };
     },
   },
