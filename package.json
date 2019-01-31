@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "repository": "git@github.com:cyder/SyncPod-BFF.git",
-  "author": "Shintani Teppei <teppest1215@gmail.com>",
+  "author": "Cyder <contact@cyder.tech>",
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development nodemon --exec babel-node src/index.ts --extensions '.ts'",
