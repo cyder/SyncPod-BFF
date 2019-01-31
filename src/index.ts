@@ -2,12 +2,17 @@ import { ApolloServer, gql } from "apollo-server-express";
 import * as fs from "fs";
 import * as path from "path";
 import express from "express";
+import { GraphQLDateTime, GraphQLDate, GraphQLTime } from "graphql-iso-date";
 
 const API_HOST = process.env.NODE_ENV === "production" ? "https://api.sync-pod.com" : "http://localhost:3000s";
 const PORT = 4000;
 
 // The GraphQL schema
 const typeDefs = gql`
+  scalar DateTime
+  scalar Date
+  scalar Time
+
   ${fs.readFileSync(path.resolve(__dirname, "..", "graphql", "types.graphql"), "utf-8")}
 
   type Query {
@@ -143,6 +148,9 @@ const resolvers = {
       };
     },
   },
+  DateTime: GraphQLDateTime,
+  Date: GraphQLDate,
+  Time: GraphQLTime,
 };
 
 const app = express();
