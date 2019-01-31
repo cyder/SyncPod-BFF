@@ -14,7 +14,7 @@ type User {
   id: Int!
   name: String!
   email: String!
-  access_token: String!
+  accessToken: String!
   selfIntroduction: String
   icon: String
   createdAt: DateTime!
