@@ -9,10 +9,14 @@ const typeDefs = gql`
   type Query {
     ping: String
     recentlyJoinedRooms(limit: Int): [Room!]!
+    roomById(id: Int!): Room!
+    roomByKey(key: String!): Room!
+    popularRooms: [Room!]!
   }
 
   type Mutation {
-    login(email: String!, password: String!): User
+    login(email: String!, password: String!): User!
+    createRoom(name: String!, description: String!, public: Boolean!): Room!
   }
 `;
 
@@ -20,8 +24,8 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     ping: () => "pong",
-    recentlyJoinedRooms: async (root: any, args: any, context: any, info: any) => {
-      return await [
+    recentlyJoinedRooms: (root: any, args: any, context: any, info: any) => {
+      return [
         {
           id: 790,
           name: "MyString",
@@ -44,10 +48,69 @@ const resolvers = {
         },
       ];
     },
+    roomById: (root: any, args: any, context: any, info: any) => {
+      return {
+        id: 1114,
+        name: "MyString",
+        description: "MyText",
+        key: "Da4D0oPj",
+        public: false,
+        now_playing_video: null,
+        last_played_video: null,
+        online_users: [],
+        create_user: {
+          id: 1992,
+          name: "MyString",
+          icon: null,
+        },
+      };
+    },
+    roomByKey: (root: any, args: any, context: any, info: any) => {
+      return {
+        id: 1119,
+        name: "MyString",
+        description: "MyText",
+        key: "lBMdoiq4",
+        public: false,
+        now_playing_video: null,
+        last_played_video: null,
+        online_users: [],
+        create_user: {
+          id: 1997,
+          name: "MyString",
+          url: null,
+        },
+      };
+    },
+    popularRooms: (root: any, args: any, context: any, info: any) => {
+      return [
+        {
+          id: 1120,
+          name: "public room",
+          description: "MyText",
+          key: "bxsUcUj1",
+          public: true,
+          now_playing_video: null,
+          last_played_video: null,
+          online_users: [
+            {
+              id: 1998,
+              name: "MyString",
+              url: null,
+            },
+          ],
+          create_user: {
+            id: 1998,
+            name: "MyString",
+            url: null,
+          },
+        },
+      ];
+    },
   },
   Mutation: {
-    login: async (root: any, args: any, context: any, info: any) => {
-      return await {
+    login: (root: any, args: any, context: any, info: any) => {
+      return {
         id: 69,
         icon: null,
         email: "user@example.com",
@@ -56,6 +119,23 @@ const resolvers = {
         created_at: "2018-03-31T07:35:05.000Z",
         updated_at: "2018-03-31T07:35:05.000Z",
         self_introduction: null,
+      };
+    },
+    createRoom: (root: any, args: any, context: any, info: any) => {
+      return {
+        id: 1112,
+        name: "MyString",
+        description: "MyText",
+        key: "dAg2r_u9",
+        public: true,
+        now_playing_video: null, // あとで変更する
+        last_played_video: null, // あとで変更する
+        online_users: [], // あとで変更する
+        create_user: {
+          id: 1988,
+          name: "MyString",
+          url: null,
+        },
       };
     },
   },
