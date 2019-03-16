@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/extensions": [
+      ".ts"
+    ],
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "/"],
+        "extensions": [".ts"]
+      }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base"
+  ]
+}
