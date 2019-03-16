@@ -1,0 +1,5 @@
+linter:
+  eslint:
+    npm_install: true
+    dir: './src'
+    ext: '.ts'
