@@ -10,11 +10,13 @@
     "serve": "NODE_ENV=production node lib/index.js",
     "build": "babel ./src --out-dir lib --extensions '.ts'",
     "tsc": "tsc -p . --noEmit",
-    "lint": "eslint -c ./.eslintrc.json 'src/**/*.ts'"
+    "lint": "eslint -c ./.eslintrc.json 'src/**/*.ts'",
+    "lint-fix": "eslint --fix -c ./.eslintrc.json 'src/**/*.ts'"
   },
   "dependencies": {
     "apollo-server": "^2.3.3",
     "apollo-server-express": "^2.3.3",
+    "express": "^4.16.4",
     "graphql": "^14.1.1",
     "graphql-iso-date": "^3.6.1"
   },
