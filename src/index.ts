@@ -4,7 +4,7 @@ import * as path from "path";
 import express from "express";
 import { GraphQLDateTime, GraphQLDate, GraphQLTime } from "graphql-iso-date";
 
-const API_HOST = process.env.NODE_ENV === "production" ? "https://api.sync-pod.com" : "http://localhost:3000s";
+const API_HOST = process.env.NODE_ENV === "production" ? "https://api.sync-pod.com" : "http://localhost:3000";
 const PORT = 4000;
 
 // The GraphQL schema
