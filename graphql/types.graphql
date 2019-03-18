@@ -1,0 +1,52 @@
+type Room {
+  id: Int!
+  createUser: User
+  nowPlayingVideo: Video
+  lastPlayingVideo: Video
+  onlineUsers: [User!]!
+  name: String!
+  key: String!
+  description: String!
+  public: Boolean!
+}
+
+type User {
+  id: Int!
+  name: String!
+  email: String!
+  accessToken: String!
+  selfIntroduction: String
+  icon: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type UserReport {
+  id: Int!
+  message: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Video {
+  youtubeVideoId: String!
+  title: String
+  channelTitle: String
+  thumbnailUrl: String
+  duration: String
+  description: String
+  viewCount: Int
+  published: DateTime!
+}
+
+type VideoPageInfo {
+  videos: [Video!]!
+  pageInfo: PageInfo!
+}
+
+type PageInfo {
+  nextPageCursor: String
+  prevPageCursor: String
+  totalCount: Int!
+  perPage: Int!
+}
