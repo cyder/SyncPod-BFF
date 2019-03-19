@@ -380,7 +380,16 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app, cors: { credentials: true, origin: CLIENT_HOST } });
 
-app.listen({ port: PORT }, () => {
-  // eslint-disable-next-line no-console
-  console.log(`🚀  Server ready at localhost:${PORT}${server.graphqlPath}`);
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen({ port: PORT }, () => {
+    // eslint-disable-next-line no-console
+    console.log(`🚀  Server ready at localhost:${PORT}${server.graphqlPath}`);
+  });
+}
+
+export default server;
+
+export {
+  typeDefs,
+  resolvers,
+};
