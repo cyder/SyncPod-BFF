@@ -10,6 +10,7 @@
     "serve": "NODE_ENV=production node lib/index.js",
     "build": "babel ./src --out-dir lib --extensions '.ts'",
     "test": "jest",
+    "test-ci": "jest --coverage && codecov",
     "tsc": "tsc -p . --noEmit",
     "lint": "eslint -c ./.eslintrc.json 'src/**/*.ts'",
     "lint-fix": "eslint --fix -c ./.eslintrc.json 'src/**/*.ts'"
@@ -35,6 +36,7 @@
     "@typescript-eslint/typescript-estree": "^1.4.2",
     "apollo-server-testing": "^2.4.8",
     "babel-jest": "^24.5.0",
+    "codecov": "^3.2.0",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.1.0",
