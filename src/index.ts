@@ -4,7 +4,7 @@ import * as path from 'path';
 import express from 'express';
 import { GraphQLDateTime, GraphQLDate, GraphQLTime } from 'graphql-iso-date';
 
-const API_HOST = process.env.NODE_ENV === 'production' ? 'https://api.sync-pod.com' : 'http://localhost:3000';
+const CLIENT_HOST = process.env.NODE_ENV === 'production' ? 'https://app.sync-pod.com' : 'http://localhost:8080';
 const PORT = 4000;
 
 // The GraphQL schema
@@ -378,7 +378,7 @@ const server = new ApolloServer({
   resolvers,
 });
 
-server.applyMiddleware({ app, cors: { credentials: true, origin: API_HOST } });
+server.applyMiddleware({ app, cors: { credentials: true, origin: CLIENT_HOST } });
 
 app.listen({ port: PORT }, () => {
   // eslint-disable-next-line no-console
