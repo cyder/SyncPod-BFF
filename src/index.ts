@@ -4,8 +4,8 @@ import * as path from 'path';
 import express from 'express';
 import { GraphQLDateTime, GraphQLDate, GraphQLTime } from 'graphql-iso-date';
 
-const CLIENT_HOST = process.env.NODE_ENV === 'production' ? 'https://app.sync-pod.com' : 'http://localhost:8080';
-const PORT = 4000;
+const CLIENT_HOST = new RegExp(process.env.CLIENT_HOST || '^http://localhost(:[0-9]+)?$');
+const PORT = process.env.PORT || 4000;
 
 // The GraphQL schema
 const typeDefs = gql`
