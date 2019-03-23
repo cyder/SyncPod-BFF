@@ -14,8 +14,8 @@
     "tsc": "tsc -p . --noEmit",
     "lint": "eslint -c ./.eslintrc.json 'src/**/*.ts'",
     "lint-fix": "eslint --fix -c ./.eslintrc.json 'src/**/*.ts'",
-    "publish:schema": "apollo service:push --endpoint='http://localhost:4000/graphql'",
-    "publish:schema:master": "apollo service:push --tag=master --endpoint='http://localhost:4000/graphql'"
+    "publish:schema": "apollo service:download & sleep 1 & apollo service:push --localSchemaFile=schema.json",
+    "publish:schema:master": "apollo service:download & sleep 1 & apollo service:push --tag=master --localSchemaFile=schema.json"
   },
   "dependencies": {
     "apollo-server": "^2.4.8",

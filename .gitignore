@@ -3,3 +3,4 @@ lib/
 .env
 yarn-error.log
 coverage/
+schema.json
