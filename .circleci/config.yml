@@ -49,7 +49,10 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/repo
-      - run: yarn publish:schema:master
+      - run:
+        command: |
+          yarn serve
+          yarn publish:schema:master
 workflows:
   version: 2
   build:
@@ -64,3 +67,5 @@ workflows:
       - publish-schema-master:
           requires:
             - dependencies
+            - build
+            - test
