@@ -39,9 +39,6 @@ jobs:
           at: ~/repo
       - run: yarn test-ci
   publish-schema-master:
-    requires:
-      - build
-      - test
     docker:
       - image: circleci/node:8.11
     working_directory: ~/repo
@@ -49,10 +46,12 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/repo
+      - run: yarn build
       - run:
-        command: |
-          yarn serve
-          yarn publish:schema:master
+          name: yarn serve
+          command: yarn serve:dev
+          background: true
+      - run: yarn publish:schema:master
 workflows:
   version: 2
   build:
@@ -69,3 +68,6 @@ workflows:
             - dependencies
             - build
             - test
+          filters:
+            branches:
+              only: master

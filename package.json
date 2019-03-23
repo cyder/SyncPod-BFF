@@ -8,14 +8,15 @@
   "scripts": {
     "start": "NODE_ENV=development nodemon --exec babel-node src/index.ts --extensions '.ts'",
     "serve": "NODE_ENV=production node lib/index.js",
+    "serve:dev": "NODE_ENV=development node lib/index.js",
     "build": "babel ./src --out-dir lib --extensions '.ts'",
     "test": "jest",
     "test-ci": "jest --coverage && codecov",
     "tsc": "tsc -p . --noEmit",
     "lint": "eslint -c ./.eslintrc.json 'src/**/*.ts'",
     "lint-fix": "eslint --fix -c ./.eslintrc.json 'src/**/*.ts'",
-    "publish:schema": "apollo service:download & sleep 1 & apollo service:push --localSchemaFile=schema.json",
-    "publish:schema:master": "apollo service:download & sleep 1 & apollo service:push --tag=master --localSchemaFile=schema.json"
+    "publish:schema": "apollo service:push --endpoint='http://localhost:4000/graphql'",
+    "publish:schema:master": "apollo service:push --tag=master --key=$ENGINE_API_KEY --endpoint='http://localhost:4000/graphql'"
   },
   "dependencies": {
     "apollo-server": "^2.4.8",
