@@ -38,7 +38,7 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run: yarn test-ci
-  publish-schema:
+  publish-schema-master:
     requires:
       - build
       - test
@@ -61,4 +61,6 @@ workflows:
       - test:
           requires:
             - dependencies
-
+      - publish-schema-master:
+          requires:
+            - dependencies
