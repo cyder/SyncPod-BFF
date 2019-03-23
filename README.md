@@ -38,4 +38,19 @@ open http://localhost:4000/graphql
 
 ## Deployment
 
+### When publish schema to apollo platform
+
+The schema is published automatically when the master branch is merged. So, don't publish schema from local to apollo platform. However, if there is a bottleneck according to the implementation of BFF, you can directory push schema from local to apollo.
+
+
+```
+cp .env.sample .env
+vim .env # Set ENGINE_API_KEY
+
+yarn serve:dev
+yarn publish:schema
+```
+
+### Other
+
 COMMING SOON...
