@@ -11,7 +11,9 @@
     "build": "babel ./src --out-dir lib --extensions '.ts'",
     "tsc": "tsc -p . --noEmit",
     "lint": "eslint -c ./.eslintrc.json 'src/**/*.ts'",
-    "lint-fix": "eslint --fix -c ./.eslintrc.json 'src/**/*.ts'"
+    "lint-fix": "eslint --fix -c ./.eslintrc.json 'src/**/*.ts'",
+    "publish:schema": "apollo service:push --endpoint='http://localhost:4000/graphql'",
+    "publish:schema:master": "apollo service:push --tag=master --endpoint='http://localhost:4000/graphql'"
   },
   "dependencies": {
     "apollo-server": "^2.3.3",
@@ -31,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "@typescript-eslint/typescript-estree": "^1.4.2",
+    "apollo": "^2.6.2",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.1.0",
