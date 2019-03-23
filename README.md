@@ -1,4 +1,4 @@
-# SyncPod-BFF
+# SyncPod-BFF | [![CircleCI](https://circleci.com/gh/cyder/SyncPod-BFF.svg?style=svg)](https://circleci.com/gh/cyder/SyncPod-BFF) [![codecov](https://codecov.io/gh/cyder/SyncPod-BFF/branch/master/graph/badge.svg)](https://codecov.io/gh/cyder/SyncPod-BFF)
 
 ```
 ------------------         -----------------           -------------------
