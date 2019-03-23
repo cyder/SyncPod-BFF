@@ -40,8 +40,8 @@ open http://localhost:4000/graphql
 
 ### When publish schema to apollo platform
 
-Basically, don't publish schema from local because pushed when merged master automatically.
-But I want you to push it from local when you thought the implementation of BFF is the bottleneck.
+The schema is published automatically when the master branch is merged. So, don't publish schema from local to apollo platform. However, if there is a bottleneck according to the implementation of BFF, you can directory push schema from local to apollo.
+
 
 ```
 cp .env.sample .env
