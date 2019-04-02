@@ -26,9 +26,12 @@ export default class SyncpodV1Api extends RESTDataSource {
   }
 
   async login(email: string, password: string) {
-    return this.post('/login', {
+    const { user } = await this.post('/login', {
       email,
       password,
     });
+
+    user.icon = user.icon.url;
+    return humps.camelizeKeys(user);
   }
 }

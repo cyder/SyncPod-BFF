@@ -1,14 +1,5 @@
 export default {
-  login: () => ({
-    id: 69,
-    icon: null,
-    email: 'user@example.com',
-    name: 'MyString',
-    accessToken: '69:q1aXhT-onz4sWejxcV1s',
-    createdAt: '2018-03-31T07:35:05.000Z',
-    updatedAt: '2018-03-31T07:35:05.000Z',
-    selfIntroduction: null,
-  }),
+  login: async (_source: any, { email, password }: { email: string; password: string }, { dataSources }: any) => dataSources.syncpodV1API.login(email, password),
   signup: async (
     _source: any,
     { email, password, name }: { email: string; password: string; name: string },
