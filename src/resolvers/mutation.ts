@@ -9,16 +9,11 @@ export default {
     updatedAt: '2018-03-31T07:35:05.000Z',
     selfIntroduction: null,
   }),
-  signup: () => ({
-    id: 94,
-    email: 'user@example.com',
-    name: '',
-    accessToken: '94:U-yJzvseLMqVibMK-y_Z',
-    createdAt: '2018-03-31T07:35:06.000Z',
-    updatedAt: '2018-03-31T07:35:06.000Z',
-    selfIntroduction: null,
-    icon: null,
-  }),
+  signup: async (
+    _source: any,
+    { email, password, name }: { email: string; password: string; name: string },
+    { dataSources }: any,
+  ) => dataSources.syncpodV1API.signup(email, password, name),
   createRoom: () => ({
     id: 1112,
     name: 'MyString',
