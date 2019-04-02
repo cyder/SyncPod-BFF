@@ -19,3 +19,4 @@ const server = new ApolloServer({
 server.applyMiddleware({ app, cors: { credentials: true, origin: CLIENT_HOST } });
 
 export default app;
+export { server };

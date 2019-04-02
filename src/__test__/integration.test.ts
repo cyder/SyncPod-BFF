@@ -1,7 +1,7 @@
 import { createTestClient } from 'apollo-server-testing';
 import { gql } from 'apollo-server-express';
 
-import server from '..';
+import { server } from '../server';
 
 const PING = gql`
   query {
