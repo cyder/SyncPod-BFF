@@ -1,8 +1,8 @@
-import { resolvers } from '../..';
+import Mutation from '../../resolvers/mutation';
 
-describe('[Query.ping]', () => {
+describe('[Mutation.login]', () => {
   it('returns user', async () => {
-    const res = await resolvers.Mutation.login();
+    const res = await Mutation.login();
     expect(res).toEqual({
       id: 69,
       icon: null,
