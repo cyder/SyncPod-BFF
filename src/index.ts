@@ -1,5 +1,7 @@
 import app from './server';
 
+require('dotenv').config();
+
 const PORT = process.env.PORT || 4000;
 
 app.listen({ port: PORT }, () => {
