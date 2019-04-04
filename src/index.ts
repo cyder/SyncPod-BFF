@@ -4,7 +4,9 @@ import * as path from 'path';
 import express from 'express';
 import { GraphQLDateTime, GraphQLDate, GraphQLTime } from 'graphql-iso-date';
 
-const CLIENT_HOST = new RegExp(process.env.CLIENT_HOST || '^http://localhost(:[0-9]+)?$');
+const CLIENT_HOST = new RegExp(
+  process.env.CLIENT_HOST || '^http://localhost(:[0-9]+)?$',
+);
 const PORT = process.env.PORT || 4000;
 
 // The GraphQL schema
@@ -13,7 +15,10 @@ const typeDefs = gql`
   scalar Date
   scalar Time
 
-  ${fs.readFileSync(path.resolve(__dirname, '..', 'graphql', 'types.graphql'), 'utf-8')}
+  ${fs.readFileSync(
+    path.resolve(__dirname, '..', 'graphql', 'types.graphql'),
+    'utf-8',
+  )}
 
   type Query {
     ping: String
@@ -57,7 +62,8 @@ const resolvers = {
         },
         lastPlayedVideo: {
           youtubeVideoId: 'R1cuHyCF09M',
-          title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+          title:
+            '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
           channelTitle: 'Takeshi Yonaha',
           thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
           description:
@@ -88,7 +94,8 @@ const resolvers = {
         nowPlayingVideo: null,
         lastPlayedVideo: {
           youtubeVideoId: 'R1cuHyCF09M',
-          title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+          title:
+            '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
           channelTitle: 'Takeshi Yonaha',
           thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
           description:
@@ -109,7 +116,8 @@ const resolvers = {
       nowPlayingVideo: null,
       lastPlayedVideo: {
         youtubeVideoId: 'R1cuHyCF09M',
-        title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+        title:
+          '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
         channelTitle: 'Takeshi Yonaha',
         thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
         description:
@@ -134,7 +142,8 @@ const resolvers = {
       nowPlayingVideo: null,
       lastPlayedVideo: {
         youtubeVideoId: 'R1cuHyCF09M',
-        title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+        title:
+          '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
         channelTitle: 'Takeshi Yonaha',
         thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
         description:
@@ -160,7 +169,8 @@ const resolvers = {
         nowPlayingVideo: null,
         lastPlayedVideo: {
           youtubeVideoId: 'R1cuHyCF09M',
-          title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+          title:
+            '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
           channelTitle: 'Takeshi Yonaha',
           thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
           description:
@@ -193,7 +203,8 @@ const resolvers = {
       videos: [
         {
           youtubeVideoId: 'lRmhVKfIJMY',
-          title: 'COMPASSでお宝キーワード(ブルーオーシャンキーワード)の見つけ方＆豪華特典付き動画',
+          title:
+            'COMPASSでお宝キーワード(ブルーオーシャンキーワード)の見つけ方＆豪華特典付き動画',
           channelTitle: 'channel taka',
           thumbnailUrl: 'https://i.ytimg.com/vi/lRmhVKfIJMY/mqdefault.jpg',
           description:
@@ -204,7 +215,8 @@ const resolvers = {
         },
         {
           youtubeVideoId: '8hHe1g7huSE',
-          title: 'アフィリエイトでライバルサイト不在のキーワードを見つける「ずらし」の方法！実践解説',
+          title:
+            'アフィリエイトでライバルサイト不在のキーワードを見つける「ずらし」の方法！実践解説',
           channelTitle: '龍市',
           thumbnailUrl: 'https://i.ytimg.com/vi/8hHe1g7huSE/mqdefault.jpg',
           description:
@@ -215,7 +227,8 @@ const resolvers = {
         },
         {
           youtubeVideoId: '1Vqs1hmcUUs',
-          title: 'エコノミスト・森田龍二の「経済・会計キーワード解説」 第3回　～G20～',
+          title:
+            'エコノミスト・森田龍二の「経済・会計キーワード解説」 第3回　～G20～',
           channelTitle: '【資格の総合スクール】LEC東京リーガルマインド',
           thumbnailUrl: 'https://i.ytimg.com/vi/1Vqs1hmcUUs/mqdefault.jpg',
           description:
@@ -247,7 +260,8 @@ const resolvers = {
         },
         {
           youtubeVideoId: 'SB8CIJfWGzs',
-          title: 'キーワード選定によるSEO対策まとめ！検索エンジンにアピールするタイトルを極めよう！',
+          title:
+            'キーワード選定によるSEO対策まとめ！検索エンジンにアピールするタイトルを極めよう！',
           channelTitle: '渚ひろし＠自由ライター',
           thumbnailUrl: 'https://i.ytimg.com/vi/SB8CIJfWGzs/mqdefault.jpg',
           description:
@@ -258,7 +272,8 @@ const resolvers = {
         },
         {
           youtubeVideoId: '1lGkpi67Z94',
-          title: 'Googleキーワードプランナーの使い方！検索ボリューム&関連キーワードを調べよう！',
+          title:
+            'Googleキーワードプランナーの使い方！検索ボリューム&関連キーワードを調べよう！',
           channelTitle: '渚ひろし＠自由ライター',
           thumbnailUrl: 'https://i.ytimg.com/vi/1lGkpi67Z94/mqdefault.jpg',
           description:
@@ -269,7 +284,8 @@ const resolvers = {
         },
         {
           youtubeVideoId: 'R1cuHyCF09M',
-          title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+          title:
+            '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
           channelTitle: 'Takeshi Yonaha',
           thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
           description:
@@ -294,7 +310,8 @@ const resolvers = {
           title: 'キーワードプランナーの使い方',
           channelTitle: 'メディサポチャンネル SEO集客コンサル',
           thumbnailUrl: 'https://i.ytimg.com/vi/bBdnUIOz_Do/mqdefault.jpg',
-          description: 'Google　キーワードプランナーの簡単な説明\n\nhttp://okayama-mediasupport.com/seo/archives/392',
+          description:
+            'Google　キーワードプランナーの簡単な説明\n\nhttp://okayama-mediasupport.com/seo/archives/392',
           viewCount: 290,
           duration: '5:58',
           published: '2017/01/12',
@@ -358,7 +375,8 @@ const resolvers = {
     uploadUserIcon: () => ({
       id: 87,
       accessToken: '87:UyH2nBGrDiyRzsYXa6mx',
-      icon: '/Users/shintanitoshio/Works/YouTubeSyncServer/spec/tmp/uploads/user/icon/87/icon.jpg',
+      icon:
+        '/Users/shintanitoshio/Works/YouTubeSyncServer/spec/tmp/uploads/user/icon/87/icon.jpg',
       email: 'user@example.com',
       name: 'MyString',
       createdAt: '2018-03-31T07:35:06.000Z',
@@ -378,7 +396,10 @@ const server = new ApolloServer({
   resolvers,
 });
 
-server.applyMiddleware({ app, cors: { credentials: true, origin: CLIENT_HOST } });
+server.applyMiddleware({
+  app,
+  cors: { credentials: true, origin: CLIENT_HOST },
+});
 
 if (process.env.NODE_ENV !== 'test') {
   app.listen({ port: PORT }, () => {
@@ -389,7 +410,4 @@ if (process.env.NODE_ENV !== 'test') {
 
 export default server;
 
-export {
-  typeDefs,
-  resolvers,
-};
+export { typeDefs, resolvers };
