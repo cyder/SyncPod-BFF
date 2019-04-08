@@ -5,7 +5,9 @@ import resolvers from './resolvers';
 import typeDefs from './typeDefs';
 import SyncpodV1Api from './api/syncpodV1Api';
 
-const CLIENT_HOST = new RegExp(process.env.CLIENT_HOST || '^http://localhost(:[0-9]+)?$');
+const CLIENT_HOST = new RegExp(
+  process.env.CLIENT_HOST || '^http://localhost(:[0-9]+)?$',
+);
 
 const app = express();
 const server = new ApolloServer({
@@ -16,7 +18,10 @@ const server = new ApolloServer({
   }),
 });
 
-server.applyMiddleware({ app, cors: { credentials: true, origin: CLIENT_HOST } });
+server.applyMiddleware({
+  app,
+  cors: { credentials: true, origin: CLIENT_HOST },
+});
 
 export default app;
 export { server };

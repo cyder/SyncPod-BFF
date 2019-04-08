@@ -7,7 +7,10 @@ export default gql`
   scalar Date
   scalar Time
 
-  ${fs.readFileSync(path.resolve(__dirname, '..', 'graphql', 'types.graphql'), 'utf-8')}
+  ${fs.readFileSync(
+    path.resolve(__dirname, '..', 'graphql', 'types.graphql'),
+    'utf-8',
+  )}
 
   type Query {
     ping: String

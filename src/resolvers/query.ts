@@ -19,7 +19,8 @@ export default {
       },
       lastPlayedVideo: {
         youtubeVideoId: 'R1cuHyCF09M',
-        title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+        title:
+          '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
         channelTitle: 'Takeshi Yonaha',
         thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
         description:
@@ -50,7 +51,8 @@ export default {
       nowPlayingVideo: null,
       lastPlayedVideo: {
         youtubeVideoId: 'R1cuHyCF09M',
-        title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+        title:
+          '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
         channelTitle: 'Takeshi Yonaha',
         thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
         description:
@@ -71,7 +73,8 @@ export default {
     nowPlayingVideo: null,
     lastPlayedVideo: {
       youtubeVideoId: 'R1cuHyCF09M',
-      title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+      title:
+        '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
       channelTitle: 'Takeshi Yonaha',
       thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
       description:
@@ -96,7 +99,8 @@ export default {
     nowPlayingVideo: null,
     lastPlayedVideo: {
       youtubeVideoId: 'R1cuHyCF09M',
-      title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+      title:
+        '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
       channelTitle: 'Takeshi Yonaha',
       thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
       description:
@@ -122,7 +126,8 @@ export default {
       nowPlayingVideo: null,
       lastPlayedVideo: {
         youtubeVideoId: 'R1cuHyCF09M',
-        title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+        title:
+          '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
         channelTitle: 'Takeshi Yonaha',
         thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
         description:
@@ -155,7 +160,8 @@ export default {
     videos: [
       {
         youtubeVideoId: 'lRmhVKfIJMY',
-        title: 'COMPASSでお宝キーワード(ブルーオーシャンキーワード)の見つけ方＆豪華特典付き動画',
+        title:
+          'COMPASSでお宝キーワード(ブルーオーシャンキーワード)の見つけ方＆豪華特典付き動画',
         channelTitle: 'channel taka',
         thumbnailUrl: 'https://i.ytimg.com/vi/lRmhVKfIJMY/mqdefault.jpg',
         description:
@@ -166,7 +172,8 @@ export default {
       },
       {
         youtubeVideoId: '8hHe1g7huSE',
-        title: 'アフィリエイトでライバルサイト不在のキーワードを見つける「ずらし」の方法！実践解説',
+        title:
+          'アフィリエイトでライバルサイト不在のキーワードを見つける「ずらし」の方法！実践解説',
         channelTitle: '龍市',
         thumbnailUrl: 'https://i.ytimg.com/vi/8hHe1g7huSE/mqdefault.jpg',
         description:
@@ -177,7 +184,8 @@ export default {
       },
       {
         youtubeVideoId: '1Vqs1hmcUUs',
-        title: 'エコノミスト・森田龍二の「経済・会計キーワード解説」 第3回　～G20～',
+        title:
+          'エコノミスト・森田龍二の「経済・会計キーワード解説」 第3回　～G20～',
         channelTitle: '【資格の総合スクール】LEC東京リーガルマインド',
         thumbnailUrl: 'https://i.ytimg.com/vi/1Vqs1hmcUUs/mqdefault.jpg',
         description:
@@ -209,7 +217,8 @@ export default {
       },
       {
         youtubeVideoId: 'SB8CIJfWGzs',
-        title: 'キーワード選定によるSEO対策まとめ！検索エンジンにアピールするタイトルを極めよう！',
+        title:
+          'キーワード選定によるSEO対策まとめ！検索エンジンにアピールするタイトルを極めよう！',
         channelTitle: '渚ひろし＠自由ライター',
         thumbnailUrl: 'https://i.ytimg.com/vi/SB8CIJfWGzs/mqdefault.jpg',
         description:
@@ -220,7 +229,8 @@ export default {
       },
       {
         youtubeVideoId: '1lGkpi67Z94',
-        title: 'Googleキーワードプランナーの使い方！検索ボリューム&関連キーワードを調べよう！',
+        title:
+          'Googleキーワードプランナーの使い方！検索ボリューム&関連キーワードを調べよう！',
         channelTitle: '渚ひろし＠自由ライター',
         thumbnailUrl: 'https://i.ytimg.com/vi/1lGkpi67Z94/mqdefault.jpg',
         description:
@@ -231,7 +241,8 @@ export default {
       },
       {
         youtubeVideoId: 'R1cuHyCF09M',
-        title: '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
+        title:
+          '成功のキーワードはセルフイメージにあった！聞くだけで成功脳へ「成功へのサプリ」',
         channelTitle: 'Takeshi Yonaha',
         thumbnailUrl: 'https://i.ytimg.com/vi/R1cuHyCF09M/mqdefault.jpg',
         description:
@@ -256,7 +267,8 @@ export default {
         title: 'キーワードプランナーの使い方',
         channelTitle: 'メディサポチャンネル SEO集客コンサル',
         thumbnailUrl: 'https://i.ytimg.com/vi/bBdnUIOz_Do/mqdefault.jpg',
-        description: 'Google　キーワードプランナーの簡単な説明\n\nhttp://okayama-mediasupport.com/seo/archives/392',
+        description:
+          'Google　キーワードプランナーの簡単な説明\n\nhttp://okayama-mediasupport.com/seo/archives/392',
         viewCount: 290,
         duration: '5:58',
         published: '2017/01/12',
