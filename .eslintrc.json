@@ -24,5 +24,9 @@
     "airbnb-base",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
-  ]
+  ],
+  "rules": {
+    "no-unused-vars": "off",
+    "no-undef": "off"
+  }
 }

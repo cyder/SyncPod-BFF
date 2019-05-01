@@ -19,11 +19,14 @@
     "publish:schema:master": "apollo service:push --tag=master --key=$ENGINE_API_KEY --endpoint='http://localhost:4000/graphql'"
   },
   "dependencies": {
+    "apollo-datasource-rest": "^0.3.2",
     "apollo-server": "^2.4.8",
     "apollo-server-express": "^2.4.8",
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "graphql": "^14.1.1",
-    "graphql-iso-date": "^3.6.1"
+    "graphql-iso-date": "^3.6.1",
+    "humps": "^2.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -33,6 +36,7 @@
     "@babel/preset-typescript": "^7.1.0",
     "@types/graphql": "^14.0.5",
     "@types/graphql-iso-date": "^3.3.1",
+    "@types/humps": "^1.1.2",
     "@types/jest": "^24.0.11",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
