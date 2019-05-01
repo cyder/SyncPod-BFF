@@ -1,8 +1,10 @@
+import SyncpodV1Api from '../api/syncpodV1Api';
+
 export default {
   login: async (
     _source: any,
     { email, password }: { email: string; password: string },
-    { dataSources }: any,
+    { dataSources }: { dataSources: { syncpodV1API: SyncpodV1Api } },
   ) => dataSources.syncpodV1API.login(email, password),
   signup: async (
     _source: any,
@@ -11,7 +13,7 @@ export default {
       password,
       name,
     }: { email: string; password: string; name: string },
-    { dataSources }: any,
+    { dataSources }: { dataSources: { syncpodV1API: SyncpodV1Api } },
   ) => dataSources.syncpodV1API.signup(email, password, name),
   createRoom: () => ({
     id: 1112,
