@@ -16,7 +16,7 @@
     "lint": "eslint -c ./.eslintrc.json 'src/**/*.ts'",
     "lint-fix": "eslint --fix -c ./.eslintrc.json 'src/**/*.ts'",
     "publish:schema": "apollo service:push --endpoint='http://localhost:4000/graphql'",
-    "publish:schema:master": "apollo service:push --tag=master --key=$ENGINE_API_KEY --endpoint='http://localhost:4000/graphql'"
+    "publish:schema:master": "apollo service:push --tag=master --endpoint='http://localhost:4000/graphql'"
   },
   "dependencies": {
     "apollo-datasource-rest": "^0.3.2",
